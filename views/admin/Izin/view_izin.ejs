@@ -1,0 +1,69 @@
+<%- include('../../Part/header.ejs') %>
+
+    <%- include('../../Part/sidebar.ejs') %>
+
+        <%- include('../../Part/navbar.ejs') %>
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <h1 class="h3 mb-4 text-gray-800">Pengurusan Izin</h1>
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                            aria-controls="home" aria-selected="true">Show Data Izin</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                            aria-controls="profile" aria-selected="false">Add Data Izin</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <%- include('table_izin.ejs') %>
+                        <%- include('add_izin.ejs') %>
+
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+
+
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Select "Logout" below if you are ready to end your current session.
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                                Cancel
+                            </button>
+                            <a class="btn btn-primary" href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <%- include('../../Part/js.ejs') %>
+                <%- include('edit_izin.ejs') %>
+
+                    <script>
+                        $('#dataTable').on('click', '.button-update', function () {
+                            let id = $(this).data('id');
+                            let tanggal_izin = $(this).data('tanggal_izin');
+                            let alasan_izin = $(this).data('alasan_izin');
+                            $('#edit-modal').modal('show');
+                            $('.id').val(id);
+                            $('.tanggal_izin').val(tanggal_izin);
+                            $('.alasan_izin').val(alasan_izin);
+                        })
+                    </script>

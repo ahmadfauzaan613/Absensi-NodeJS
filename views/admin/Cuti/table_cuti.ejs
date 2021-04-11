@@ -1,0 +1,55 @@
+<div class="tab-pane fade show active" id="show-item" role="tabpanel" aria-labelledby="home-tab">
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4 mt-2">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Id Karyawan</th>
+                            <th>Nama Karyawan</th>
+                            <th>Posisi Karyawan</th>
+                            <th>Alasan Cuti</th>
+                            <th>Tanggal Cuti</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let=i=0; i < cuti.length; i++ ){%>
+                            <tr>
+                                <td>
+                                    <%= karyawan[i].id_karyawan %>
+                                </td>
+                                <td>
+                                    <%= karyawan[i].nama_karyawan %>
+                                </td>
+                                <td>
+                                    <%= karyawan[i].posisi_karyawan %>
+                                </td>
+                                <td>
+                                    <%= cuti[i].alasan_cuti %>
+                                </td>
+                                <td>
+                                    <%= cuti[i].tanggal_cuti.toLocaleString().split(',')[0] %>
+                                </td>
+                                <td>
+                                    <form action="/admin/view_cuti/<%= cuti[i].id %>?_method=DELETE" method="POST">
+                                        <a href="javascript:void()" type="button"
+                                            class="btn btn-warning btn-circle btn-sm button-update"
+                                            data-id="<%= cuti[i].id %>" data-alasan_cuti="<%= cuti[i].alasan_cuti %>"
+                                            data-tanggal_cuti="<%= cuti[i].tanggal_cuti %>">
+                                            <i class=" fas fa-edit">
+                                            </i></a>
+                                        <button type="submit" class="btn btn-sm btn-danger btn-circle"><i
+                                                class="fas fa-trash"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

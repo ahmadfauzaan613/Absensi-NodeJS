@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "f2980bda-d0c3-4c92-9edd-a8c688ed77ec",
+		"name": "Abseni-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API Data Karyawan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/karyawan",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"karyawan"
+					]
+				},
+				"description": "Menampilkan semua data karyawan yang terdaftar"
+			},
+			"response": []
+		},
+		{
+			"name": "API Data Laporan ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1//laporan",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"",
+						"laporan"
+					]
+				},
+				"description": "Menampilkan seluruh data hadir, cuti dan izin para karyawan"
+			},
+			"response": []
+		},
+		{
+			"name": "API Data Hadir",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/data_hadir",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"data_hadir"
+					]
+				},
+				"description": "menampilkan seluruh data hadir para karyawan"
+			},
+			"response": []
+		},
+		{
+			"name": "API Data izin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/data_izin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"data_izin"
+					]
+				},
+				"description": "Menampilkan seluruh data karyawan yang izin dalam bekerja"
+			},
+			"response": []
+		},
+		{
+			"name": "API Data Cuti",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/data_cuti",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"data_cuti"
+					]
+				},
+				"description": "Menampilkan seluruh data cuti karyawan"
+			},
+			"response": []
+		}
+	]
+}

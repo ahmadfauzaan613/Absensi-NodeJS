@@ -1,0 +1,29 @@
+<div class="tab-pane fade" id="add-data" role="tabpanel" aria-labelledby="profile-tab">
+
+    <div class="card shadow mb-4 mt-2">
+        <div class="card-body">
+            <form action="/admin/view_cuti" method="POST">
+                <div class="form-group">
+                    <label for="karyawanid">ID karyawan & Nama karyawan</label>
+                    <select class="form-control" name="karyawanid">
+                        <option value="">-- ID & Nama ----</option>
+                        <% for(let i=0; i < karyawan.length; i++ ){ %>
+                            <option value="<%= karyawan[i].id %>">
+                                <%= karyawan[i].id_karyawan %> - <%= karyawan[i].nama_karyawan %>
+                            </option>
+                            <% } %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Tanggal Cuti</label>
+                    <input type="datetime-local" class="form-control" name="tanggal_cuti" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Alasan Cuti</label>
+                    <input type="text" class="form-control " name="alasan_cuti" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Pengajuan Cuti</button>
+            </form>
+        </div>
+    </div>
+</div>
